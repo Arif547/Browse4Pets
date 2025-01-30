@@ -5,32 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse4Pets</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>    
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/21d8b6e0f7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+              --color-clifford: #da373d;
+              --color-accent: #FFDC26;
+              --color-secondary: #FFF9F4;
+              --color-text: #111111;
+              --color-text-2: rgba(17, 17, 17, 0.7);
+              --font-display:"ADLaM Display", "serif";
+              --font-sora: "Sora", "serif";
+            }
+          </style>
 </head>
 
-<body class="">
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" checked="checked" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-          <p>hello</p>
+<body class="font-sora text-text">
+    <header class="bg-[#FFF9F4] px-5 max-lg:border-b-[1px] border-text">
+        <div class="max-w-[1320px] mx-auto flex justify-between items-center h-[70px] lg:h-[100px]">
+            <div>
+                <a href="" class="flex items-center gap-3">
+                    <img src="./assets/logo-header.png" alt="">
+                    <h1 class="text-2xl hidden sm:block">Browse<span class="text-accent">4</span>Pets</h1>
+                </a>
+            </div>
+            <div class="hidden lg:block">
+                <ul class="flex text-xl gap-8">
+                    <li class="transition-all hover:text-accent">Find a pet</li>
+                    <li class="transition-all hover:text-accent">Breeds</li>
+                    <li class="transition-all hover:text-accent">Contact us</li>
+                </ul>
+            </div>
+            <div class="lg:flex gap-4 items-center hidden">
+                <i class="fa-regular fa-bell text-2xl"></i>
+                <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+
+                <div class="flex gap-3">
+                    <button
+                        class="text-xl px-7 py-2 border-[1px] border-accent rounded-lg cursor-pointer hover:bg-accent transition-all">Login</button>
+                    <button
+                        class="text-xl px-7 py-2 border-[1px] border-accent rounded-lg bg-accent cursor-pointer hover:bg-transparent transition-all">Register</button>
+                </div>
+            </div>
+            <div class="lg:hidden">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
         </div>
-      </div>
-      <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-          <p>hello</p>
-        </div>
-      </div>
-      <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-          <p>hello</p>
-        </div>
-      </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section class="px-5 lg:pt-[100px] pt-8">
+            
+            <div class="max-w-[1320px] mx-auto lg:h-[725px] bg-[url(./assets/cat-big.png)] bg-no-repeat bg-contain bg-bottom max-lg:pb-[132px]">
+                <div class="absolute right-5 lg:right-40 max-lg:bottom-5 animate-spin"><img src="./assets/cat-cartoon.png" alt=""></div>
+                <div class="max-w-[680px]">
+                    <h2 class="font-display lg:text-[56px] lg:leading-[73px] text-[30px] leading-[39px]">Pamper Your Pet, Because They Deserve the Bes</h2>
+                    <p class="lg:text-[20px] lg:leading-9 pt-3 pb-3 lg-pt-4 lg:pb-6 text-text-2">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and
+                        make tails wag with joy!</p>
+                    <button class="text-xl px-7 py-2 border-[1px] border-accent rounded-lg bg-accent cursor-pointer hover:bg-transparent transition-all max-lg:text-[16px]">Find a pet</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
 </body>
 
 </html>
